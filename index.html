@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Gesture Kuiz Demo</title>
-  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
-  <script defer src="script.js"></script>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; }
+    video { border: 2px solid #333; border-radius: 8px; }
+    #jawapan { font-size: 1.5em; margin-top: 20px; color: #0077cc; }
+  </style>
+
+  <!-- TensorFlow.js & Handpose Model -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
 </head>
 <body>
   <h2>Soalan: Apa warna langit?</h2>
-  <ul>
+  <ul style="list-style: none;">
     <li>A: Biru (👍)</li>
     <li>B: Merah (✌️)</li>
   </ul>
-  <video id="webcam" autoplay playsinline width="300"></video>
+  <video id="webcam" autoplay playsinline width="300" height="225"></video>
   <p id="jawapan">Tunggu gesture...</p>
+
+  <script src="script.js"></script>
 </body>
 </html>
